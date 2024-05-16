@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  42webserv:
+    image: 42webserv
+    build:
+      context: .
+      dockerfile: ./Dockerfile
