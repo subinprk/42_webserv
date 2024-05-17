@@ -6,7 +6,7 @@
 /*   By: siun <siun@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/17 16:59:27 by siun              #+#    #+#             */
-/*   Updated: 2024/05/17 19:13:04 by siun             ###   ########.fr       */
+/*   Updated: 2024/05/17 19:32:56 by siun             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 using namespace std;
 
 class RequestParse;
+
 class ResponseParse
 {
 	private:
@@ -25,7 +26,7 @@ class ResponseParse
 			string	_httpVersion;
 			int		 _statusCode;
 			string _reasonPhrase;
-		};
+		}responseLine;
 		struct ResponseHeader
 		{
 			string _date;
@@ -33,7 +34,7 @@ class ResponseParse
 			string _contentLength;
 			string _contentType;
 			string _connection;
-		};
+		}responseHeader;
 		string _body; //like <html>...</html>
 	public:
 		ResponseParse(string httpStr);

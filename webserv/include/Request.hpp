@@ -6,7 +6,7 @@
 /*   By: siun <siun@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/17 16:36:07 by siun              #+#    #+#             */
-/*   Updated: 2024/05/17 19:14:12 by siun             ###   ########.fr       */
+/*   Updated: 2024/05/17 19:35:00 by siun             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,8 @@ class RequestParse
 			string _method;
 			string _file;
 			string _httpVersion;
-		};
-		class RequestHeader
+		}requestLine;
+		struct RequestHeader
 		{
 			string _host;
 			string _userAgent;
@@ -36,7 +36,7 @@ class RequestParse
 			string _acceptEncoding = "gzip, deflate, br";
 			string _connection = "keep-alive";
 
-		};
+		}requestHeader;
 		string _body; //like <html>...</html>
 	public:
 		RequestParse(const string &httpStr);
