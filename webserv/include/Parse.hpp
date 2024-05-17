@@ -1,37 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Methods.hpp                                        :+:      :+:    :+:   */
+/*   Parse.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: subpark <subpark@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/16 23:19:36 by siun              #+#    #+#             */
-/*   Updated: 2024/05/17 16:24:37 by subpark          ###   ########.fr       */
+/*   Created: 2024/05/17 16:25:38 by subpark           #+#    #+#             */
+/*   Updated: 2024/05/17 16:27:01 by subpark          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef METHODS_HPP
-# define METHODS_HPP
+#ifndef PARSE_HPP
+# define PARSE_HPP
+#include <string>
+#include <iostream>
 
-# include <sys/socket.h>
-# include <string>
-# include <iostream>
-
-class Methods
+class	Parse
 {
-	private:
-		int		_socket;
-		int		_port;
-	//	void	HEAD();
-
-	public:
-		Methods(int socket, int port);
-		Methods(const Methods &copy);
-		Methods &operator=(const Methods &copy);
-		~Methods();
-
-		int		getSocket() const;
-		int		getPort() const;
+	Parse()
 };
 
 #endif
