@@ -6,7 +6,7 @@
 /*   By: siun <siun@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/17 16:59:27 by siun              #+#    #+#             */
-/*   Updated: 2024/05/17 19:32:56 by siun             ###   ########.fr       */
+/*   Updated: 2024/05/17 19:35:59 by siun             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ class ResponseParse
 		{
 			string _date;
 			string _server;
-			string _contentLength;
+			int 	_contentLength;
 			string _contentType;
 			string _connection;
 		}responseHeader;
@@ -47,7 +47,7 @@ class ResponseParse
 		string	reasonPhrase();
 		string	date();
 		string	server();
-		string	contentLength();
+		int		contentLength();
 		string	contentType();
 		string	connection();
 		string	body();

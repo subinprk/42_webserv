@@ -6,7 +6,7 @@
 /*   By: siun <siun@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/17 16:59:02 by siun              #+#    #+#             */
-/*   Updated: 2024/05/17 19:32:41 by siun             ###   ########.fr       */
+/*   Updated: 2024/05/17 19:35:58 by siun             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,7 +70,7 @@ string	ResponseParse::server()
 	return (responseHeader._server);
 }
 
-string	ResponseParse::contentLength()
+int		ResponseParse::contentLength()
 {
 	return (responseHeader._contentLength);
 }
