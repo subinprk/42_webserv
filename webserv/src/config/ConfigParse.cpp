@@ -6,7 +6,7 @@
 /*   By: siun <siun@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/17 22:37:44 by siun              #+#    #+#             */
-/*   Updated: 2024/05/20 18:32:39 by siun             ###   ########.fr       */
+/*   Updated: 2024/05/20 18:33:39 by siun             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,7 @@ t_server chunckParse(std::string chunck)
 {
 	t_server	server;
 
-	chunck.find("port")
+	chunck.find("port");
 
 	return server;
 }
