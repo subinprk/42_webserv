@@ -6,7 +6,7 @@
 /*   By: subpark <subpark@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/17 22:37:44 by siun              #+#    #+#             */
-/*   Updated: 2024/05/21 16:05:02 by subpark          ###   ########.fr       */
+/*   Updated: 2024/05/21 16:33:07 by subpark          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,8 @@ std::vector<int>	findIndent(std::string str)
 std::vector<std::string> findChunck(std::string config, std::vector<int> indents)
 {
 	int	start = 0;
-	int end = config.length();
+	int end = end = std::find((int)(start + sizeof(int)), end, 0) - 1;;
+	while ()
 	start = std::find(start, end, 0);
 	if (start == indents + )
 	end = std::find((int)(start + sizeof(int)), end, 0) - 1;
