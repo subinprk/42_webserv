@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ConfigParse.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: siun <siun@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: subpark <subpark@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/17 22:37:54 by siun              #+#    #+#             */
-/*   Updated: 2024/05/20 18:33:40 by siun             ###   ########.fr       */
+/*   Updated: 2024/05/21 16:32:22 by subpark          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ class ConfigParse
 typedef struct s_server
 {
 	int			 	port;
-	std::string 	server;
+	std::string 	host;
 	std::string		server_name;
 	std::string 	default_error_page;
 	int 			client_max_body_size;

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ConfigParse.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: siun <siun@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: subpark <subpark@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/17 22:37:44 by siun              #+#    #+#             */
-/*   Updated: 2024/05/20 18:33:39 by siun             ###   ########.fr       */
+/*   Updated: 2024/05/21 16:05:02 by subpark          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,37 +23,30 @@ std::string openFile(std::string path)
 		, std::istreambuf_iterator<char>());
 }
 
-std::vector<int>	findOccurance(std::string str, const char ch)
+std::vector<int>	findIndent(std::string str)
 {
-	std::vector<int> indices;
+	std::vector<int> level;
 	for (int i = 0; i < str.size(); i ++)
 	{
-		if (str[i] == ch)
-			indices.push_back(i);
+		if (str[i] == '\n')
+		{
+			int j;
+			for (j = 0; j == '\t'; j ++) ;
+			level.push_back(j);
+			i = i + j;
+		}
 	}
-	return indices;
+	return level;
 }
 
-std::string findChunck(std::string config)
+std::vector<std::string> findChunck(std::string config, std::vector<int> indents)
 {
-	std::vector<int> left = findOccurance(config, LEFT_BRACKET);
-	std::vector<int> right = findOccurance(config, RIGHT_BRACKET);
-	static int start;
-	int	countLeft = 0;
-	int	countRight = 0;
-	int	i;
-	for(i = 0; i < config.length(); i ++)
-	{
-		if (left[i] < right[i])
-			countLeft ++;
-		else if (left[i] > right[i])
-			countRight ++;
-		if (countLeft == countRight)
-			break;
-	}
-	if (countLeft != countRight)
-		throw std::runtime_error("Could not find matching bracket");
-	std::string chunck = config.substr(start, i - start);
+	int	start = 0;
+	int end = config.length();
+	start = std::find(start, end, 0);
+	if (start == indents + )
+	end = std::find((int)(start + sizeof(int)), end, 0) - 1;
+	std::string chunck = config.substr(start, end);
 	return chunck;
 }
 
